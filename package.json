@@ -1,0 +1,25 @@
+{
+    "name": "backend-practice",
+    "version": "1.0.0",
+    "description": "mod-1 practice work",
+    "main": "server.js",
+    "scripts": {
+        "test": "jest --coverage",
+        "start": "nodemon server"
+    },
+    "keywords": [
+        "Node",
+        "JS",
+        "Practice"
+    ],
+    "author": "Hazey",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "jest": "^29.4.3",
+        "nodemon": "^2.0.20"
+    }
+}
