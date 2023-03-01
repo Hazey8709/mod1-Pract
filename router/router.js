@@ -63,4 +63,21 @@ router.put("/:id/", (req, res, next) => {
     console.log("PUT By ID#");
 });
 
+//!  DELETE By ID#   ((Not working as expected))
+//*  localhost:4000/exercise/:id/:name/
+router.delete("/:id/", (req, res, next) => {
+    const id = req.params.id;
+    const name = req.params.name;
+    res.status(200).json({
+        message: "successful - get by ID",
+        id: id,
+        name: name,
+        metadata: {
+            hostname: req.hostname,
+            method: req.method,
+        },
+    });
+    console.log("Delete By ID#");
+});
+
 module.exports = router;

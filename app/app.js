@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 //* localhost:4000/
 app.get("/", (req, res) => {
     res.status(200).json({ message: "service is up" });
-    console.log("service Is Running!");
+    console.log("service Is Up!");
 });
 
 //!   Routers
