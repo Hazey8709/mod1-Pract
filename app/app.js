@@ -1,6 +1,6 @@
 const express = require("express");
 const router = require("../router/router");
-const myRouter = require("../router/myRouter");
+// const myRouter = require("../router/myRouter");
 const app = express();
 
 //! middleware
@@ -32,8 +32,8 @@ app.get("/", (req, res) => {
 //* Exercise-Router
 app.use("/exercise", router);
 
-//* MyRouter
-app.use("/profile", myRouter);
+// //* MyRouter
+// app.use("/profile", myRouter);
 
 //! Error Handling
 app.use((req, res, next) => {

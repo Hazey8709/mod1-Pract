@@ -11,12 +11,12 @@ router.get("/", (req, res) => {
             method: req.method,
         },
     });
-    console.log("GET");
+    console.log("GET-ALL");
 });
 
 //! GET By ID#
 //* localhost:4000/exercise/:id
-router.get("/:id", (req, res, next) => {
+router.get("/:id", (req, res) => {
     const id = req.params.id;
     res.status(200).json({
         message: "successful - Post by ID",
@@ -31,7 +31,7 @@ router.get("/:id", (req, res, next) => {
 
 //!  POST By ID#
 //*  localhost:4000/exercise/:id/:name/
-router.post("/:id/:name/", (req, res, next) => {
+router.post("/:id/:name/", (req, res) => {
     const id = req.params.id;
     const name = req.params.name;
     res.status(200).json({
@@ -48,7 +48,7 @@ router.post("/:id/:name/", (req, res, next) => {
 
 //!  PUT By ID#   ((Not working as expected))
 //*  localhost:4000/exercise/:id/:name/
-router.put("/:id/", (req, res, next) => {
+router.put("/:id/", (req, res) => {
     const id = req.params.id;
     const name = req.params.name;
     res.status(200).json({
@@ -65,7 +65,7 @@ router.put("/:id/", (req, res, next) => {
 
 //!  DELETE By ID#   ((Not working as expected))
 //*  localhost:4000/exercise/:id/:name/
-router.delete("/:id/", (req, res, next) => {
+router.delete("/:id/", (req, res) => {
     const id = req.params.id;
     const name = req.params.name;
     res.status(200).json({
