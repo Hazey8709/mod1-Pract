@@ -1,6 +1,6 @@
 //!  Add, Subtract, Multiply, divide, SQRT, MAX.
 
-const basicOperations = {
+const operations = {
     add: function (A, B) {
         return A + B;
     },
@@ -16,19 +16,31 @@ const basicOperations = {
     divide: function (A, B) {
         return A / B;
     },
-};
 
-const advancedOperations = {
-    SQRT: function (A, B) {
-        return A + B;
+    SQRT: function (A) {
+        return Math.sqrt(A);
     },
 
-    Max: function (A, B) {
-        return A - B;
+    max: function (A, B) {
+        return Math.max(A, B);
     },
 };
 
-module.exports = {
-    basicOperations,
-    advancedOperations,
-};
+module.exports = operations;
+
+////! 2nd way
+// const advancedOperations = {
+//     SQRT: function (A) {
+//         return Math.sqrt(A);
+//     },
+
+//     Max: function (A, B) {
+//          return A - B;
+//      },
+// };
+
+////! 2nd way
+// module.exports = {
+//     basicOperations,
+//     advancedOperations,
+// };
