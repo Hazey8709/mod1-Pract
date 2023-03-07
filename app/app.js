@@ -1,6 +1,6 @@
 const express = require("express");
 const router = require("../router/router");
-// const myRouter = require("../router/myRouter");
+const myRouter = require("../router/myRouter");
 const app = express();
 
 //! middleware
@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 app.use("/exercise", router);
 
 // //* MyRouter
-// app.use("/profile", myRouter);
+app.use("/profile", myRouter);
 
 //! Error Handling
 app.use((req, res, next) => {
@@ -47,6 +47,7 @@ app.use((error, req, res, next) => {
         error: {
             message: error.message,
             status: error.status,
+            method: req.method,
         },
     });
 });

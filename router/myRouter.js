@@ -33,10 +33,10 @@ myRouter.post("/", (req, res) => {
 });
 
 //! PUT (Update By ID)    ------NOT-WORKING
-//* http://localhost:4000/profile/
+//* http://localhost:4000/profile/:userId
 myRouter.put("/:userId", (req, res) => {
     const userId = req.params.userId;
-    const userIndex = profile.findIndex((user) => user.id === userId);
+    const userIndex = users.findIndex((user) => user.id == userId);
     Object.assign(profile[userIndex], req.body);
     res.send(profile);
 
